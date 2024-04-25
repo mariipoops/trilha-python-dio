@@ -1,0 +1,127 @@
+print("\n================ Bem Vidos ao Banco Dio.Cash ================")
+print("Para iniciarmos, verifique sua conta através do CPF.")
+
+cpf = int(input("Informe aqui o seu CPF."))
+cpf= ""
+nascim= ""
+nome= ""
+endereço= ""
+import random
+numero_aleat = random.randint(1,999)
+conta = 1 + numero_aleat
+Agencia=("001")
+cliente= (nome,cpf,nascim,endereço,conta)
+clientes_banco = [(cliente)]
+
+
+
+def cadastro_cliente():
+   if cpf not in clientes_banco:
+     print("Agora realize o seu cadastro abaixo!")
+   else:
+        print("CPF já cadastrado, digite novamente um CPF válido.")
+
+print("\n================ Cadastro ================")
+nome=(input("Informe o seu nome completo: "))
+cpf= int(input("Informe aqui o seu CPF: "))
+nascim= input("Informe sua data de nascimento (ex: 02.02.97): ")
+endereço = input("Informe seu endereço completo: ")
+
+def salvar_cliente(nome,cpf,nascim,endereço,/,):
+            cliente += clientes_banco
+            return clientes_banco
+
+print ("\n================ Clientes cadastrados ================")
+print (f"Cliente:{nome}\t{cpf}\t{nascim}\t{endereço}")
+print(f"Usuário cadastrado com sucesso!")
+print ("\n======================================================")
+
+def criarconta(agencia,conta,cliente,/,):
+    cliente=(salvar_cliente)
+    conta.append(cliente)
+print(f"Parabéns, conta criada com sucesso!")
+print(f"Sua nova Conta: {Agencia} \t{conta}.")
+   
+def salvarconta ():
+    {conta}.append in cliente(conta)             
+    print ("\n======================================================")  
+    
+print ("\n======================================================")
+print("Para iniciarmos selecione a opção desejada.")
+
+menu = """
+[1] Depositar
+[2] Sacar
+[3] Extrato
+[0] Sair
+
+Digite sua opção aqui, e pressione o enter => """
+
+saldo = 3000
+limite = 500
+extrato = ""
+numero_saques = 0
+LIMITE_SAQUES = 3
+valor = ""
+
+while True:
+    opcao = input(menu)
+
+    def depositar(saldo,valor,extrato,/):
+        if opcao == "1":
+            valor = float(input("Informe o valor do depósito: R$"))
+        if valor > 0:
+            saldo += valor
+            extrato += f"Depósito: R$ {valor:.2f}\n"
+
+            print("Operação realizada com sucesso! O valor depositado já se encontra em seu Saldo Bancário.")
+
+        else:
+            print("Operação falhou! O valor informado é inválido, tente novamente.")
+            return saldo,extrato
+
+    def sacar(*,saldo,valor,extrato,limite,numero_saques,limite_saques):
+        if opcao == "2(*,saldo,valor,extrato,limite,numero_saques,limite_saques)":
+            valor = float(input("Informe o valor do saque: R$ "))
+
+        excedeu_saldo = valor > saldo
+
+        excedeu_limite = valor > limite
+
+        excedeu_saques = numero_saques >= LIMITE_SAQUES
+       
+
+        if excedeu_saldo:
+
+            print("Operação falhou! Você não tem saldo suficiente.")
+
+        elif excedeu_limite:
+
+            print("Operação falhou! O valor do saque excede o limite.")
+
+        elif excedeu_saques:
+
+            print("Limite de saques excedido.")
+
+        elif valor > 0:
+            saldo -= valor
+            extrato += f"Saque: R$ {valor:.2f}\n"
+            numero_saques += 1
+
+            print("Operação realizada com sucesso! Basta realizar a retirada no caixa.")
+
+        else:
+            print("Operação falhou! O valor informado é inválido.")
+        return saldo,extrato
+def extrato (saldo,/,*,extrato):
+        if opcao == "3":
+            print("\n================ EXTRATO ================")
+            print(f"Conta: {Agencia} \t{conta}.")
+            print (f"Cliente:{nome}\t{cpf}\t{nascim}\t{endereço}")
+            print("Não foram realizadas movimentações." if not extrato else extrato)
+            print(f"\nSaldo: R$ {saldo:.2f}")
+            print("==========================================")
+        elif opcao == "0": 
+            return menu
+        else:
+            print("Opção inválida! Digite uma das opções informadas acima.")
