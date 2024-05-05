@@ -1,0 +1,26 @@
+itens=[]
+menu= """
+\n================ Instalação de Internet ================
+\n============Informe  a opção desejada:==============
+[1] Cadastre o equipamento a ser utilizado
+[2] Acesse a Lista de Equipamentos cadastrados 
+[3] Sair
+Selecione a opção desejada, e pressione o enter =>: """
+
+while True:
+    opcao=(input(menu))
+    if opcao =="1":
+        item= input ("Informe qual o equipamento a ser cadastrado: ")
+        if str:
+            itens.append(item)
+            print ("Equipamento registrado com sucesso!")
+        else:
+            print ("Equipamento não registrado, digite nomavente!")
+    elif opcao == "2":
+        for item in itens:
+            print("Lista de Equipamentos:")  
+            print(f"- {item}")
+    elif opcao == "3":
+        break
+    else:
+        print ("Opção inválida, tente novamente")
